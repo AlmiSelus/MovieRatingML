@@ -14,5 +14,4 @@ public class HomePageController {
         return "This is test message";
     }
 
-
 }

@@ -5,4 +5,23 @@ package com.almi.movierating;
  */
 public class MovieData {
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public static class Builder {
+
+        private transient MovieData movieData = new MovieData();
+
+        public Builder name(String name) {
+            movieData.name = name;
+            return this;
+        }
+
+        public MovieData build() {
+            return movieData;
+        }
+    }
 }
