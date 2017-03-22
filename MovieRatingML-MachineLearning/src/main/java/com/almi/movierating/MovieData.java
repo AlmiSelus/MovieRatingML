@@ -6,9 +6,14 @@ package com.almi.movierating;
 public class MovieData {
 
     private String name;
+    private byte duration;
 
     public String getName() {
         return name;
+    }
+
+    public byte getDuration() {
+        return duration;
     }
 
     public static class Builder {
@@ -17,6 +22,11 @@ public class MovieData {
 
         public Builder name(String name) {
             movieData.name = name;
+            return this;
+        }
+
+        public Builder duration(byte duration) {
+            movieData.duration = duration;
             return this;
         }
 
