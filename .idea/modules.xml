@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MovieRatingML.iml" filepath="$PROJECT_DIR$/MovieRatingML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MovieRatingML-Backend/MovieRatingML-Backend.iml" filepath="$PROJECT_DIR$/MovieRatingML-Backend/MovieRatingML-Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MovieRatingML-Frontend/MovieRatingML-Frontend.iml" filepath="$PROJECT_DIR$/MovieRatingML-Frontend/MovieRatingML-Frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MovieRatingML-MachineLearning/MovieRatingML-MachineLearning.iml" filepath="$PROJECT_DIR$/MovieRatingML-MachineLearning/MovieRatingML-MachineLearning.iml" />
+    </modules>
+  </component>
+</project>
