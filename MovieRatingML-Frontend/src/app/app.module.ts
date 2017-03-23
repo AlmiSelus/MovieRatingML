@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent }  from './app.component';
+import { NavigationComponent} from './components/navigation/navigation.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
@@ -17,7 +18,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
     ])
   ],
-  declarations: [ AppComponent, WelcomeComponent ],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    WelcomeComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
