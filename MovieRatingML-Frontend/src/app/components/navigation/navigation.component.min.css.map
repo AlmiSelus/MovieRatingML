@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,GAAG,CACD,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,CAAC,CACZ,MAAM,CAAE,IAAI,CACZ,MAAE,CACA,OAAO,CAAE,IAAI,CACb,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,MAAM,CACnB,UAAU,CAAE,IAAI,CAChB,eAAe,CAAE,aAAa,CAC9B,OAAO,CAAE,CAAC,CAEV,QAAC,CACC,eAAe,CAAE,IAAI,CACrB,KAAK,CCfH,OAAO",
+"sources": ["navigation.component.scss","../../globals.scss"],
+"names": [],
+"file": "navigation.component.min.css"
+}

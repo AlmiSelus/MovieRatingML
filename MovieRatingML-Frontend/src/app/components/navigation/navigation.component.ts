@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'nav-component',
-  temlplateUrl: 'app/components/navigation/navigation.component.html'
+  templateUrl: 'navigation.component.html',
+  styleUrls: ['navigation.component.min.css']
 })
 
 export class NavigationComponent {

@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var WelcomeComponent = (function () {
-    function WelcomeComponent() {
-        this.pageTitle = "MovieRating ML";
-        this.pageAuthors = ["Michał Stasiak", "Krzysztof Krawiec"];
+var NavigationComponent = (function () {
+    function NavigationComponent() {
     }
-    WelcomeComponent = __decorate([
+    NavigationComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            templateUrl: 'welcome.component.html'
+            selector: 'nav-component',
+            templateUrl: 'navigation.component.html',
+            styleUrls: ['navigation.component.min.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], WelcomeComponent);
-    return WelcomeComponent;
+    ], NavigationComponent);
+    return NavigationComponent;
 }());
-exports.WelcomeComponent = WelcomeComponent;
-//# sourceMappingURL=welcome.component.js.map
+exports.NavigationComponent = NavigationComponent;
+//# sourceMappingURL=navigation.component.js.map

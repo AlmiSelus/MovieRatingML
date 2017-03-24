@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'app/welcome/welcome.component.html'
+  moduleId: module.id,
+  templateUrl: 'welcome.component.html'
 })
 
 export class WelcomeComponent {

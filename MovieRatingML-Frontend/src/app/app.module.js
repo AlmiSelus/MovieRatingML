@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var header_module_1 = require('./modules/header/header.module');
 var welcome_component_1 = require('./welcome/welcome.component');
 var AppModule = (function () {
     function AppModule() {
@@ -26,9 +27,13 @@ var AppModule = (function () {
                     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
                     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-                ])
+                ]),
+                header_module_1.HeaderModule
             ],
-            declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                welcome_component_1.WelcomeComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

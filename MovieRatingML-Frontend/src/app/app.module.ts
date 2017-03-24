@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent }  from './app.component';
-import { NavigationComponent} from './components/navigation/navigation.component';
+import { HeaderModule} from './modules/header/header.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
@@ -16,11 +16,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
-    ])
+    ]),
+    HeaderModule
   ],
   declarations: [
     AppComponent,
-    NavigationComponent,
     WelcomeComponent
   ],
   bootstrap:    [ AppComponent ]

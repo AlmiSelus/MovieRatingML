@@ -9,19 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var WelcomeComponent = (function () {
-    function WelcomeComponent() {
-        this.pageTitle = "MovieRating ML";
-        this.pageAuthors = ["Michał Stasiak", "Krzysztof Krawiec"];
+var header_component_1 = require('../../components/header/header.component');
+var navigation_component_1 = require('../../components/navigation/navigation.component');
+var HeaderModule = (function () {
+    function HeaderModule() {
     }
-    WelcomeComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            templateUrl: 'welcome.component.html'
+    HeaderModule = __decorate([
+        core_1.NgModule({
+            imports: [],
+            declarations: [
+                header_component_1.HeaderComponent,
+                navigation_component_1.NavigationComponent
+            ],
+            exports: [
+                header_component_1.HeaderComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
-    ], WelcomeComponent);
-    return WelcomeComponent;
+    ], HeaderModule);
+    return HeaderModule;
 }());
-exports.WelcomeComponent = WelcomeComponent;
-//# sourceMappingURL=welcome.component.js.map
+exports.HeaderModule = HeaderModule;
+//# sourceMappingURL=header.module.js.map

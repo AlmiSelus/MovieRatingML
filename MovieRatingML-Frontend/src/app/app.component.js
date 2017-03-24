@@ -17,7 +17,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'movie-rating-app',
             templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.min.css']
+            styleUrls: ['app/app.component.min.css'],
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
