@@ -27,6 +27,7 @@
 
 ## File-based project format:
 *.iws
+*.iml
 
 ## Plugin-specific files:
 
@@ -59,3 +60,6 @@ fabric.properties
 **/target/
 
 # End of https://www.gitignore.io/api/intellij
+
+#Front-End Ignores
+/MovieRatingML-Frontend/node_modules/
