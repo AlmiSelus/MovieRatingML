@@ -1,7 +1,9 @@
 package com.almi.movierating.backend.controllers.movies;
 
-import com.almi.movierating.MovieData;
+import com.almi.movierating.backend.beans.MovieData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -14,6 +16,9 @@ import java.util.List;
  */
 @RestController("/api/movies")
 public class MoviesController {
+
+    @Autowired
+    private MovieRepository movieRepository;
 
     @GetMapping
     public List<MovieData> getIMDBMovieData() {
@@ -29,6 +34,11 @@ public class MoviesController {
         movieData.add(new MovieData.Builder().name("Star Wars VIII : The Last Jedi").build());
 
         return movieData;
+    }
+
+    @GetMapping("/genre/${genre}")
+    public List<MovieData> getMovieDataByGenre(@RequestParam("genre") String genre) {
+        return movieRepository.findMoviesByGenre(genre);
     }
 
 }
