@@ -20,4 +20,7 @@ public interface MovieRepository extends CrudRepository<MovieData, Long> {
     @Query("select m from MovieData m where m.name LIKE CONCAT('%',:partOfMovieTitle,'%')")
     List<MovieData> findMoviesByNameLike(@Param("partOfMovieTitle")String movieTitle);
 
+    @Query("select m from MovieData m where m.director_name = :directorName")
+    List<MovieData> findMoviesByDirector(@Param("directorName") String directorName);
+
 }

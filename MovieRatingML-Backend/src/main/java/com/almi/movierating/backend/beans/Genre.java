@@ -1,7 +1,6 @@
 package com.almi.movierating.backend.beans;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -25,6 +24,7 @@ public class Genre {
 
     @ManyToMany(cascade = {CascadeType.MERGE})
     @JoinTable(name = "genre_movie", joinColumns = @JoinColumn(name="genre_id"), inverseJoinColumns = @JoinColumn(name = "movie_id"))
+    @JsonIgnoreProperties("genres")
     private List<MovieData> movies;
 
     @JsonIgnore

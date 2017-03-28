@@ -1,5 +1,6 @@
 package com.almi.movierating.backend.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
@@ -31,7 +32,35 @@ public class MovieData {
             joinColumns =        { @JoinColumn(name = "movie_id")},
             inverseJoinColumns = { @JoinColumn(name = "genre_id")}
     )
+    @JsonIgnoreProperties("movies")
     private List<Genre> genres;
+
+    @Column
+    private String director_name;
+
+    private double num_critic_for_reviews;
+    private int director_facebook_likes;
+    private int actor_3_facebook_likes;
+    private String actor_2_name;
+    private int actor_1_facebook_likes;
+    private double gross;
+    private String actor_1_name;
+    private String num_voted_users;
+    private String cast_total_facebook_likes;
+    private String actor_3_name;
+    private String facenumber_in_poster;
+    private String plot_keywords;
+    private String movie_imdb_link;
+    private String num_user_for_reviews;
+    private String language;
+    private String country;
+    private String content_rating;
+    private double budget;
+    private String title_year;
+    private String actor_2_facebook_likes;
+    private double imdb_score;
+    private double aspect_ratio;
+    private String movie_facebook_likes;
 
     public String getName() {
         return name;

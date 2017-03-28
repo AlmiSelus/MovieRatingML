@@ -11,4 +11,4 @@ Movies Rating with Machine Learning Project. Training project to polish some ski
 
 
 ## Startup:
-To start backend, run class MovieRatingStartup in module MovieRatingML-Backend
+To start both front-end and back-end servers please run startup.bat script. Each of front-end/back-end servers will then start in separate cmd window.
