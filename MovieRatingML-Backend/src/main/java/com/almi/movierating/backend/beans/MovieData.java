@@ -2,11 +2,7 @@ package com.almi.movierating.backend.beans;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import javax.annotation.Generated;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,21 +11,27 @@ import java.util.List;
  * Created by c309044 on 2017-03-22.
  */
 @JsonSerialize
-@Entity(name = "movie")
+@Entity
+@Table(name = "movie")
 public class MovieData {
 
     @Id
     @GeneratedValue
+    @Column(name = "movie_id", unique = true, nullable = false)
     private long id;
 
-    @Column
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column
     private byte duration;
 
-    @Column
-    private List<String> genres;
+    @ManyToMany(cascade = {CascadeType.MERGE})
+    @JoinTable(name = "genre_movie",
+            joinColumns =        { @JoinColumn(name = "movie_id")},
+            inverseJoinColumns = { @JoinColumn(name = "genre_id")}
+    )
+    private List<Genre> genres;
 
     public String getName() {
         return name;
@@ -37,6 +39,10 @@ public class MovieData {
 
     public byte getDuration() {
         return duration;
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
     }
 
     public static class Builder {
@@ -58,7 +64,7 @@ public class MovieData {
             return this;
         }
 
-        public Builder genres(String... genres) {
+        public Builder genres(Genre... genres) {
             if(movieData.genres == null) {
                 movieData.genres = new ArrayList<>();
             }
