@@ -21,7 +21,7 @@ public class MovieRatingStartup {
     }
 
     @Bean
-    public DataSource dataSource(){
+    public DataSource dataSource() {
         return DataSourceBuilder.create()
                 .url("jdbc:h2:mem:moviedb:H2")
                 .driverClassName("org.h2.Driver")
