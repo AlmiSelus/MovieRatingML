@@ -1,7 +1,6 @@
 # MovieRatingML
 Movies Rating with Machine Learning Project. Training project to polish some skills and learn new ones (Machine Learning with DeepLearning4j and Angular 2)
 
-
 ## Stack:
 - Java 8
 - Maven
@@ -18,14 +17,11 @@ To start both front-end and back-end servers please run startup.bat script. Each
 - /api/movies
 Returns list of all movies in the database
 
+- /api/genre
+Returns list of all genres available
+
 - /api/genre/{genre}
 Returns all movies for specified {genre}. Example: /api/genre/Sci-Fi will return all Sci-Fi movies.
 
 ### POST
 None (for the time being)
-
-## Current Genres
-- Sci-Fi
-- Action
-
-(Though, both return the same movies)

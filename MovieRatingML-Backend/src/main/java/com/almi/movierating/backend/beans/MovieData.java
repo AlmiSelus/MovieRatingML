@@ -25,7 +25,7 @@ public class MovieData {
     private String name;
 
     @Column
-    private byte duration;
+    private short duration;
 
     @ManyToMany(cascade = {CascadeType.MERGE})
     @JoinTable(name = "genre_movie",
@@ -66,12 +66,16 @@ public class MovieData {
         return name;
     }
 
-    public byte getDuration() {
+    public short getDuration() {
         return duration;
     }
 
     public List<Genre> getGenres() {
         return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
     }
 
     public static class Builder {
@@ -88,7 +92,7 @@ public class MovieData {
             return this;
         }
 
-        public Builder duration(byte duration) {
+        public Builder duration(short duration) {
             movieData.duration = duration;
             return this;
         }
@@ -100,6 +104,10 @@ public class MovieData {
 
             movieData.genres.addAll(Arrays.asList(genres));
             return this;
+        }
+
+        public Builder genre(List<Genre> genres) {
+            return genres(genres.toArray(new Genre[genres.size()]));
         }
 
         public MovieData build() {

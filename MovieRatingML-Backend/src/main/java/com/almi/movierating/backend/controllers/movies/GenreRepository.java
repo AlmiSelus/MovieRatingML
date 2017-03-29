@@ -19,4 +19,7 @@ public interface GenreRepository extends CrudRepository<Genre, Long> {
     @Query("select g from Genre g where g.genreName = :name")
     Genre findByName(@Param("name") String genreName);
 
+    @Query("select new com.almi.movierating.backend.beans.Genre(g.genreName) from Genre g")
+    List<Genre> findAllGenreNames();
+
 }

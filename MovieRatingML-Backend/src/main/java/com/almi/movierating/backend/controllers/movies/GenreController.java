@@ -15,6 +15,11 @@ public class GenreController {
     @Autowired
     private GenreRepository genreRepository;
 
+    @GetMapping("/api/genre")
+    public Iterable<Genre> getAllGenreNames() {
+        return genreRepository.findAllGenreNames();
+    }
+
     @GetMapping("/api/genre/{genre}")
     public Genre findGenreDetails(@PathVariable("genre") String genre) {
         return genreRepository.findByName(genre);

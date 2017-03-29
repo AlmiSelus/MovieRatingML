@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -23,11 +27,6 @@ public class GenreRepositoryTest {
     @Autowired
     private GenreRepository genreRepository;
 
-    @Before
-    public void beforeTest() {
-        genreRepository.save(new Genre.Builder().name("Romance").build());
-    }
-
     @Test
     public void findGenreByName() {
         Genre sciFiGenre = genreRepository.findByName("Sci-Fi");
@@ -37,12 +36,14 @@ public class GenreRepositoryTest {
     @Test
     public void shouldNotFindGenreByName() {
         Genre documentaryGenre = genreRepository.findByName("Documentary");
-        assertNull(documentaryGenre);
+        assertNotNull(documentaryGenre);
     }
 
-    @After
-    public void afterTest() {
-        genreRepository.deleteAll();
+    @Test
+    public void shouldReturnGenreObjects() {
+        List<Genre> genres = genreRepository.findAllGenreNames();
+        assertNotNull(genres);
+        assertEquals(26, genres.size());
     }
 
 }

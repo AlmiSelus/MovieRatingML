@@ -16,7 +16,7 @@ public class MoviesController {
     @Autowired
     private MovieRepository movieRepository;
 
-    @GetMapping
+    @GetMapping("/api/movies")
     public Iterable<MovieData> getIMDBMovieData() {
         return movieRepository.findAll();
     }

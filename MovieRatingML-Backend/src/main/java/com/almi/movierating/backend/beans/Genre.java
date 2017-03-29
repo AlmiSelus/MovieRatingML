@@ -9,8 +9,9 @@ import java.util.List;
 /**
  * Created by c309044 on 2017-03-27.
  */
-@Entity
+@Entity(name = "Genre")
 @Table(name = "category")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Genre {
 
     @Id
@@ -37,6 +38,14 @@ public class Genre {
         return genreName;
     }
 
+    public Genre() {
+
+    }
+
+    public Genre(String name) {
+        this.genreName = name;
+    }
+
     public List<MovieData> getMovies() {
         return movies;
     }
@@ -52,5 +61,19 @@ public class Genre {
         public Genre build() {
             return genre;
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof Genre && genreName.equals(((Genre) obj).getGenreName());
+    }
+
+    @Override
+    public String toString() {
+        return "Genre{" +
+                "id=" + id +
+                ", genreName='" + genreName + '\'' +
+                ", movies=" + movies +
+                '}';
     }
 }
