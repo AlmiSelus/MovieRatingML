@@ -26,7 +26,6 @@ public class UserData {
         return userName;
     }
 
-
     public static class Builder {
 
         private UserData userData = new UserData();

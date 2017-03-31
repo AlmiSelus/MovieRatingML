@@ -23,8 +23,9 @@ public class MovieRepositoryTest {
     private MovieRepository movieRepository;
 
     @Test
-    public void testShouldFind6MoviesStartingWithStarWars() {
+    public void testShouldFind8MoviesStartingWithStarWars() {
         List<MovieData> starWarsMovies = movieRepository.findMoviesByNameLike("Star Wars");
+        starWarsMovies.stream().map(MovieData::getName).forEach(System.out::println);
         assertEquals(8, starWarsMovies.size());
     }
 }
