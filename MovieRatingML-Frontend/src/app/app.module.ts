@@ -6,22 +6,21 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { HeaderModule} from './modules/header/header.module';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { HomeViewComponent } from './views/home/home.view.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: '', component: HomeViewComponent },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
     ]),
     HeaderModule
   ],
   declarations: [
     AppComponent,
-    WelcomeComponent
+    HomeViewComponent
   ],
   bootstrap:    [ AppComponent ]
 })

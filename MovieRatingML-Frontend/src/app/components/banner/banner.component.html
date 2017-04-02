@@ -1,0 +1,3 @@
+<figure class="image is-hidden-touch" *ngFor='let bannerImage of bannerImages'>
+  <img [src]="bannerImage.path" *ngIf="bannerImage.visible">
+</figure>

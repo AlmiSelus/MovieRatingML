@@ -5,5 +5,5 @@ cd ..
 
 :: Start Frontend (Angular) Server
 cd MovieRatingML-Frontend
-start "Movie Rating App Frontend" #CMD# :: replace #CMD# with proper frontend startup cmd (like npm start or something)
+start "Movie Rating App Frontend" npm start
 cd ..

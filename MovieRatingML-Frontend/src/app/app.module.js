@@ -14,7 +14,7 @@ var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var header_module_1 = require('./modules/header/header.module');
-var welcome_component_1 = require('./welcome/welcome.component');
+var home_view_component_1 = require('./views/home/home.view.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,15 +24,14 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 router_1.RouterModule.forRoot([
-                    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+                    { path: '', component: home_view_component_1.HomeViewComponent },
                     { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
                 ]),
                 header_module_1.HeaderModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                welcome_component_1.WelcomeComponent
+                home_view_component_1.HomeViewComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

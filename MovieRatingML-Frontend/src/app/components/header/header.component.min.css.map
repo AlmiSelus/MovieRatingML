@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,MAAM,CACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,YAAY,CAC7B,OAAO,CAAE,MAAM,CACf,KAAK,CCNC,OAAO,CDOb,SAAE,CACA,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,CAAC,CAEd,oBAAa,CACX,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,CAAC",
-"sources": ["header.component.scss","../../globals.scss"],
-"names": [],
-"file": "header.component.min.css"
-}

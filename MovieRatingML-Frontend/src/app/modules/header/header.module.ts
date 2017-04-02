@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 
-import { HeaderComponent } from '../../components/header/header.component'
+import { SharedModule} from '../shared/shared.module'
+
+
 import { NavigationComponent } from '../../components/navigation/navigation.component';
+import { BannerComponent } from '../../components/banner/banner.component';
 
 @NgModule({
   imports: [
+    SharedModule
   ],
   declarations: [
-    HeaderComponent,
-    NavigationComponent
+    NavigationComponent,
+    BannerComponent
   ],
   exports: [
-    HeaderComponent
+    NavigationComponent,
+    BannerComponent
   ]
 })
 

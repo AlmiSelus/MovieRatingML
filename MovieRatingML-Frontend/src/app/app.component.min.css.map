@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,aAAa,CACX,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,MAAM",
+"sources": ["app.component.sass"],
 "names": [],
 "file": "app.component.min.css"
 }
