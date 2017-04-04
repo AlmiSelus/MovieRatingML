@@ -36,7 +36,7 @@ public class Genre {
     }
 
     @JsonIgnore
-    public Long count = null;
+    public Long count;
 
     @JsonProperty("name")
     public String getGenreName() {
