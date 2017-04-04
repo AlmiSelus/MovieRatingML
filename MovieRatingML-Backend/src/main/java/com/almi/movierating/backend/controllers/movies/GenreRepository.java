@@ -22,4 +22,7 @@ public interface GenreRepository extends CrudRepository<Genre, Long> {
     @Query("select new com.almi.movierating.backend.beans.Genre(g.genreName) from Genre g")
     List<Genre> findAllGenreNames();
 
+    @Query("select count(m) from Genre g join g.movies m where g.genreName = :name")
+    long countForGenre(@Param("name") String genreName);
+
 }

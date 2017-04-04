@@ -2,6 +2,8 @@ package com.almi.movierating.backend.beans;
 
 import com.fasterxml.jackson.annotation.*;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.jpa.repository.*;
+import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.*;
 import java.util.List;
@@ -33,6 +35,8 @@ public class Genre {
         return id;
     }
 
+    public Long count = null;
+
     @JsonProperty("name")
     public String getGenreName() {
         return genreName;
@@ -50,11 +54,21 @@ public class Genre {
         return movies;
     }
 
-    public static class Builder {
+    @JsonProperty("moviesCount")
+    public long getMoviesCount() {
+        return count;
+    }
+
+  public static class Builder {
         private Genre genre = new Genre();
 
         public Builder name(String name) {
             genre.genreName = name;
+            return this;
+        }
+
+        public Builder moviesInGenre(long count) {
+            genre.count = count;
             return this;
         }
 

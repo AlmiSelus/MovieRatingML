@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 /**
  * Created by c309044 on 2017-03-28.
  */
@@ -19,7 +22,11 @@ public class GenreController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/genre")
     public Iterable<Genre> getAllGenreNames() {
-        return genreRepository.findAllGenreNames();
+        return genreRepository.findAllGenreNames().stream().map(
+          genre->{
+            genre.count = genreRepository.countForGenre(genre.getGenreName());
+            return genre;
+          }).collect(Collectors.toList());
     }
 
     @CrossOrigin(origins = "http://localhost:3000")
