@@ -3,16 +3,12 @@
     <img src="../../../resources/img/LogoML.png" alt="Movie Rating ML logo">
   </div>
   <div class="nav-center">
-    <a class="nav-item is-tab is-hidden-mobile is-active">Home</a>
-    <a class="nav-item is-tab is-hidden-mobile">Features</a>
-    <a class="nav-item is-tab is-hidden-mobile">Pricing</a>
-    <a class="nav-item is-tab is-hidden-mobile">About</a>
+    <a routerLink="/home" routerLinkActive="active" class="nav-item is-tab is-hidden-mobile is-active">Home</a>
+    <a routerLink="/rankings" routerLinkActive="active" class="nav-item is-tab is-hidden-mobile">Rankings</a>
   </div>
   <div class="nav-right nav-menu">
-    <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
-    <a class="nav-item is-tab is-hidden-tablet">Features</a>
-    <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
-    <a class="nav-item is-tab is-hidden-tablet">About</a>
+    <a routerLink="/home" routerLinkActive="active" class="nav-item is-tab is-hidden-tablet is-active">Home</a>
+    <a routerLink="/rankings" routerLinkActive="active" class="nav-item is-tab is-hidden-tablet">Rankings</a>
     <a class="nav-item is-tab">
       <figure class="image is-16x16" style="margin-right: 8px;">
         <img src="http://bulma.io/images/jgthms.png">
@@ -22,8 +18,7 @@
     <a class="nav-item is-tab">Log out</a>
   </div>
   <span class="nav-toggle">
-    <span><a class="nav-item">Home</a></span>
-    <span> <a class="nav-item">Features</a></span>
-    <span> <a class="nav-item">About</a></span>
+    <span><a routerLink="/home" routerLinkActive="active" class="nav-item">Home</a></span>
+    <span> <a routerLink="/rankings" routerLinkActive="active" class="nav-item">Rankings</a></span>
   </span>
 </nav>

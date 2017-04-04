@@ -6,21 +6,23 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { HeaderModule} from './modules/header/header.module';
+import { HomeModule} from './modules/home/home.module';
+
 import { HomeViewComponent } from './views/home/home.view.component';
+import { RankingsViewComponent } from './views/rankings/rankings.view.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeViewComponent },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
-    ]),
-    HeaderModule
+    HeaderModule,
+    HomeModule
   ],
   declarations: [
     AppComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    RankingsViewComponent
   ],
   bootstrap:    [ AppComponent ]
 })

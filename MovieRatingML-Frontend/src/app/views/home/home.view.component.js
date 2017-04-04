@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var HomeViewComponent = (function () {
     function HomeViewComponent() {
-        this.pageTitle = "MovieRating ML";
-        this.pageAuthors = ["Michał Stasiak", "Krzysztof Krawiec"];
     }
     HomeViewComponent = __decorate([
         core_1.Component({

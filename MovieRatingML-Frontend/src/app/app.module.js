@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
-var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var header_module_1 = require('./modules/header/header.module');
+var home_module_1 = require('./modules/home/home.module');
 var home_view_component_1 = require('./views/home/home.view.component');
+var rankings_view_component_1 = require('./views/rankings/rankings.view.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,15 +24,13 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                router_1.RouterModule.forRoot([
-                    { path: '', component: home_view_component_1.HomeViewComponent },
-                    { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-                ]),
-                header_module_1.HeaderModule
+                header_module_1.HeaderModule,
+                home_module_1.HomeModule
             ],
             declarations: [
                 app_component_1.AppComponent,
-                home_view_component_1.HomeViewComponent
+                home_view_component_1.HomeViewComponent,
+                rankings_view_component_1.RankingsViewComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -5,8 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: 'home.view.component.html'
 })
 
-export class HomeViewComponent {
-    private pageTitle: string = "MovieRating ML";
-    private pageAuthors: string[] = ["Michał Stasiak", "Krzysztof Krawiec"];
-
-}
+export class HomeViewComponent{}
