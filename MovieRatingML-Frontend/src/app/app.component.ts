@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['app/app.component.min.css'],
 })
 export class AppComponent  {
-  private appName: string = "Movie Rating ML"
 }

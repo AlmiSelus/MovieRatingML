@@ -1,5 +1,4 @@
-export interface  IBannerImage {
-  path: string;
-  alt: string;
-  visible: boolean;
+export interface IGenre {
+  name: string;
+  movieCount: number;
 }

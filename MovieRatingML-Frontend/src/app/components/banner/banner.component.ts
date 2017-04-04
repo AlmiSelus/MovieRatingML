@@ -9,7 +9,7 @@ import { IBannerImage } from './banner_image.interface';
   templateUrl: 'banner.component.html',
   styleUrls: ['banner.component.min.css']
 })
-export class BannerComponent implements OnInit{
+export class BannerComponent implements OnInit {
   abstract: any;
   private bannerImages: IBannerImage[] = [
     {
@@ -29,12 +29,12 @@ export class BannerComponent implements OnInit{
     },
   ];
 
-  ngOnInit(){
-    let index: number = 0;
-    let prevIndex: number = 0;
-    let timer = Observable.timer(500,5000);
-    timer.subscribe(t=>{
-      if(index >= this.bannerImages.length){
+  ngOnInit ( ) {
+    let index = 0;
+    let prevIndex = 0;
+    let timer = Observable.timer( 500,5000 );
+    timer.subscribe( t => {
+      if( index >= this.bannerImages.length ) {
         index = 0;
       }
       this.bannerImages[prevIndex].visible = false;
@@ -43,7 +43,6 @@ export class BannerComponent implements OnInit{
       index ++;
 
     });
-    console.log("@BannerComponent - Init")
   }
 
 }

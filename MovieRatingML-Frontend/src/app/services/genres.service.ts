@@ -1,38 +1,30 @@
-/*
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-
+import { Response } from '@angular/http';
+import { HttpClient } from './http.client.service';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/throw';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/do';
 
-import { IProduct } from './product';
+import { IGenre } from '../interfaces/genre.interface';
 
 @Injectable()
-export class ProductService {
-  private _productUrl = 'api/products/products.json';
+export class GenresService {
+  private _genresUrl = '/api/genres';
 
-  constructor(private _http: Http) { }
+  constructor(private _http:HttpClient) {
 
-  getProducts(): Observable<IProduct[]> {
-    return this._http.get(this._productUrl)
-      .map((response: Response) => <IProduct[]> response.json())
-      .do(data => console.log('All: ' +  JSON.stringify(data)))
+  }
+
+  getProducts():Observable<IGenre[]> {
+    return this._http.get(this._genresUrl)
+      .map((res:Response) => <IGenre[]> res.json())
+      .do(data => console.log("All: " + JSON.stringify(data)))
       .catch(this.handleError);
   }
 
-  getProduct(id: number): Observable<IProduct> {
-    return this.getProducts()
-      .map((products: IProduct[]) => products.find(p => p.productId === id));
-  }
-
   private handleError(error: Response) {
-    // in a real world app, we may send the server to some remote logging infrastructure
-    // instead of just logging it to the console
     console.error(error);
-    return Observable.throw(error.json().error || 'Server error');
+    return Observable.throw(error.json().error || 'Server Error');
   }
 }
-*/

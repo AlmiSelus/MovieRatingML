@@ -44,7 +44,6 @@ var BannerComponent = (function () {
             prevIndex = index;
             index++;
         });
-        console.log("@BannerComponent - Init");
     };
     BannerComponent = __decorate([
         core_1.Component({

@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: 'home.view.component.html'
 })
 
-export class HomeViewComponent{}
+export class HomeViewComponent {
+
+}

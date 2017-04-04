@@ -23,6 +23,6 @@ import { BannerComponent } from '../../components/banner/banner.component';
   ]
 })
 
-export class HeaderModule{
+export class HeaderModule {
 
 }
