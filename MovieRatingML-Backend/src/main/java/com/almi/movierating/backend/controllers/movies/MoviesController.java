@@ -2,6 +2,7 @@ package com.almi.movierating.backend.controllers.movies;
 
 import com.almi.movierating.backend.beans.MovieData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ public class MoviesController {
     @Autowired
     private MovieRepository movieRepository;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/api/movies")
     public Iterable<MovieData> getIMDBMovieData() {
         return movieRepository.findAll();
