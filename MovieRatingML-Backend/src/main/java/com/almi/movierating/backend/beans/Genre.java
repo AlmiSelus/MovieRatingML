@@ -35,6 +35,7 @@ public class Genre {
         return id;
     }
 
+    @JsonIgnore
     public Long count = null;
 
     @JsonProperty("name")
