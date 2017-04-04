@@ -5,7 +5,7 @@
     <parent>
         <artifactId>MovieRating</artifactId>
         <groupId>com.almi.movierating</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.9</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,10 +13,15 @@
 
     <properties>
         <version.spring>5.0.0.M5</version.spring>
+        <start-class>com.almi.movierating.backend.MovieRatingStartup</start-class>
     </properties>
 
     <dependencies>
         <!-- Spring -->
+       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -52,8 +57,13 @@
         <dependency>
             <groupId>com.almi.movierating</groupId>
             <artifactId>MovieRatingML-MachineLearning</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>0.9</version>
         </dependency>
+      <dependency>
+        <groupId>com.almi.movierating</groupId>
+        <artifactId>MovieRatingML-MachineLearning</artifactId>
+        <version>0.9</version>
+      </dependency>
 
     </dependencies>
 

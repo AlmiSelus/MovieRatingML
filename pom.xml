@@ -7,10 +7,9 @@
     <groupId>com.almi.movierating</groupId>
     <artifactId>MovieRating</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.9</version>
     <modules>
         <module>MovieRatingML-MachineLearning</module>
-        <module>MovieRatingML-Frontend</module>
         <module>MovieRatingML-Backend</module>
     </modules>
 
