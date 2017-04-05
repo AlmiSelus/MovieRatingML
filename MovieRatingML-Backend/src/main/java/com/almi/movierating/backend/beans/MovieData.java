@@ -1,5 +1,6 @@
 package com.almi.movierating.backend.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -32,7 +33,7 @@ public class MovieData {
             joinColumns =        { @JoinColumn(name = "movie_id")},
             inverseJoinColumns = { @JoinColumn(name = "genre_id")}
     )
-    @JsonIgnoreProperties("movies")
+    @JsonIgnoreProperties({"movies", "moviesCount"})
     private List<Genre> genres;
 
     @Column
@@ -58,7 +59,11 @@ public class MovieData {
     private double budget;
     private String title_year;
     private String actor_2_facebook_likes;
+
+    @Column
+    @JsonIgnore
     private double imdb_score;
+
     private double aspect_ratio;
     private String movie_facebook_likes;
 
@@ -78,7 +83,11 @@ public class MovieData {
         this.genres = genres;
     }
 
-    public static class Builder {
+  public double getImdbScore() {
+    return imdb_score;
+  }
+
+  public static class Builder {
 
         private transient MovieData movieData = new MovieData();
 
@@ -94,6 +103,11 @@ public class MovieData {
 
         public Builder duration(short duration) {
             movieData.duration = duration;
+            return this;
+        }
+
+        public  Builder imdbScore(double score) {
+            movieData.imdb_score = score;
             return this;
         }
 

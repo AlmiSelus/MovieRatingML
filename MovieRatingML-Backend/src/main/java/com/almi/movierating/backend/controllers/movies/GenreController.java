@@ -4,7 +4,6 @@ import com.almi.movierating.backend.beans.Genre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -16,7 +15,7 @@ public class GenreController {
     @Autowired
     private GenreRepository genreRepository;
 
-    @CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.OPTIONS, RequestMethod.GET})
+    @CrossOrigin(methods = {RequestMethod.OPTIONS, RequestMethod.GET})
     @GetMapping("/api/genre")
     public Iterable<Genre> getAllGenreNames() {
         return genreRepository.findAllGenreNames().stream().map(

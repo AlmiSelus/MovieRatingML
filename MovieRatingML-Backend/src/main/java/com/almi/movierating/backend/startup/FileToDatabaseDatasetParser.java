@@ -41,13 +41,14 @@ public class FileToDatabaseDatasetParser implements DatasetParser<List<String>, 
 
     private static MovieData mapRowToMovieData(String movieDataRow) {
         String[] rowSplit = movieDataRow.split(",");
-        return new MovieData.Builder().name(rowSplit[11])
+        return new MovieData.Builder().name(rowSplit[11].trim())
                                       .duration(!rowSplit[3].trim().isEmpty() ? Short.parseShort(rowSplit[3]) : -1)
                                       .genre(Arrays.stream(
                                               rowSplit[9].split("\\|")).map(genre -> new Genre.Builder()
                                                                                               .name(genre)
                                                                                               .build())
                                                                        .collect(Collectors.toList()))
+                                      .imdbScore(Double.parseDouble(rowSplit[25].trim().isEmpty() ? "0" : rowSplit[25].trim()))
                                       .build();
     }
 
