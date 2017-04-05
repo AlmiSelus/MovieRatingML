@@ -1,6 +1,7 @@
 package com.almi.movierating.backend.controllers.movies;
 
 import com.almi.movierating.backend.beans.MovieData;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -23,4 +24,9 @@ public interface MovieRepository extends CrudRepository<MovieData, Long> {
     @Query("select m from MovieData m where m.director_name = :directorName")
     List<MovieData> findMoviesByDirector(@Param("directorName") String directorName);
 
+    @Query("select m from MovieData m")
+    List<MovieData> findAllPaged(Pageable pageRequest);
+
+    @Query("select count(m)/10.0 from MovieData m")
+    double getMoviePagesCount();
 }
