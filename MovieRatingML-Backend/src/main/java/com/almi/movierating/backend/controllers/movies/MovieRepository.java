@@ -27,6 +27,6 @@ public interface MovieRepository extends CrudRepository<MovieData, Long> {
     @Query("select m from MovieData m")
     List<MovieData> findAllPaged(Pageable pageRequest);
 
-    @Query("select count(m)/10.0 from MovieData m")
-    double getMoviePagesCount();
+    @Query("select count(m) from MovieData m")
+    double countAllMovies();
 }

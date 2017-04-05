@@ -9,13 +9,16 @@ import java.util.stream.Collectors;
 /**
  * Created by c309044 on 2017-03-28.
  */
+@CrossOrigin(origins = "http://localhost:3000",
+  methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS},
+  allowedHeaders = {"x-requested-with", "accept", "authorization", "content-type"},
+  exposedHeaders = {"access-control-allow-headers", "access-control-allow-methods", "access-control-allow-origin", "access-control-max-age", "X-Frame-Options"})
 @RestController("/api/genre")
 public class GenreController {
 
     @Autowired
     private GenreRepository genreRepository;
 
-    @CrossOrigin(methods = {RequestMethod.OPTIONS, RequestMethod.GET})
     @GetMapping("/api/genre")
     public Iterable<Genre> getAllGenreNames() {
         return genreRepository.findAllGenreNames().stream().map(
@@ -25,7 +28,6 @@ public class GenreController {
           }).collect(Collectors.toList());
     }
 
-    @CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.OPTIONS, RequestMethod.GET})
     @GetMapping("/api/genre/{genre}")
     public Genre findGenreDetails(@PathVariable("genre") String genre) {
         return genreRepository.findByName(genre);

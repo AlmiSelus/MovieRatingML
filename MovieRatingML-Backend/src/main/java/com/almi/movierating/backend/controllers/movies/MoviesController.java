@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController("/api/movies")
 public class MoviesController {
 
+    private final static int MOVIES_PER_PAGE = 10;
+
     @Autowired
     private MovieRepository movieRepository;
 
@@ -31,12 +33,22 @@ public class MoviesController {
         if(pageNumber < 1) {
             pageNumber = 1;
         }
-        return movieRepository.findAllPaged(new PageRequest(pageNumber-1, 10));
+
+        long pagesCount = maxPagesCount();
+        if(pageNumber > pagesCount) {
+          pageNumber = (int) pagesCount;
+        }
+
+        return movieRepository.findAllPaged(new PageRequest(pageNumber-1, MOVIES_PER_PAGE));
     }
 
     @GetMapping("/api/movies/pageCount")
     public long getMoviesPageCount() {
-        return (long) Math.ceil(movieRepository.getMoviePagesCount());
+        return maxPagesCount();
+    }
+
+    public long maxPagesCount() {
+        return (long) Math.ceil(movieRepository.countAllMovies()/MOVIES_PER_PAGE);
     }
 
 }
