@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eAAe,CACb,SAAS,CAAE,IAAI,CAEjB,cAAc,CACZ,MAAM,CAAE,GAAG,CACX,gBAAgB,CAAE,WAAW,CAG7B,eAAE,CACA,OAAO,CAAE,MAAM,CACf,SAAS,CAAE,IAAI",
+"sources": ["movies-list.component.sass"],
+"names": [],
+"file": "movies-list.component.min.css"
+}

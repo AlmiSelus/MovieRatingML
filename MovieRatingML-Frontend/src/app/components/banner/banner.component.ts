@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
-import { IBannerImage } from './banner_image.interface';
+import { IBannerImage } from '../../interfaces/banner-image.interface';
 
 @Component({
   moduleId: module.id,
@@ -32,16 +32,15 @@ export class BannerComponent implements OnInit {
   ngOnInit ( ) {
     let index = 0;
     let prevIndex = 0;
-    let timer = Observable.timer( 500,5000 );
+    let timer = Observable.timer( 500, 5000 );
     timer.subscribe( t => {
-      if( index >= this.bannerImages.length ) {
+      if ( index >= this.bannerImages.length ) {
         index = 0;
       }
       this.bannerImages[prevIndex].visible = false;
       this.bannerImages[index].visible = true;
       prevIndex = index;
       index ++;
-
     });
   }
 

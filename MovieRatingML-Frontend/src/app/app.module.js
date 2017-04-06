@@ -14,6 +14,7 @@ var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var header_module_1 = require('./modules/header/header.module');
 var home_module_1 = require('./modules/home/home.module');
+var footer_component_1 = require('./components/footer/footer.component');
 var home_view_component_1 = require('./views/home/home.view.component');
 var rankings_view_component_1 = require('./views/rankings/rankings.view.component');
 var AppModule = (function () {
@@ -30,7 +31,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 home_view_component_1.HomeViewComponent,
-                rankings_view_component_1.RankingsViewComponent
+                rankings_view_component_1.RankingsViewComponent,
+                footer_component_1.FooterComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

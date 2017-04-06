@@ -20,8 +20,9 @@ var HttpClient = (function () {
             btoa('user:password'));
         headers.append('Content-Type', 'text/plain');
     };
-    HttpClient.prototype.get = function (url) {
+    HttpClient.prototype.get = function (host, url) {
         var headers = new http_1.Headers();
+        this.urlPrefix = host || this.urlPrefix;
         this.createAuthorizationHeader(headers);
         return this.http.get(this.urlPrefix + url, {
             headers: headers

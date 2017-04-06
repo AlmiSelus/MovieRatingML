@@ -1,4 +1,5 @@
 export interface IGenre {
   name: string;
-  movieCount: number;
+  moviesCount: number;
+  imageSource: string;
 }

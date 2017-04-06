@@ -16,14 +16,15 @@ var GenresComponent = (function () {
     }
     GenresComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._genresService.getProducts()
+        this._genresService.getProductsTMP()
             .subscribe(function (products) { return _this.genres = products; });
     };
     GenresComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'genres-component',
-            templateUrl: 'genres.component.html'
+            templateUrl: 'genres.component.html',
+            styleUrls: ['genres.component.min.css'],
         }), 
         __metadata('design:paramtypes', [genres_service_1.GenresService])
     ], GenresComponent);

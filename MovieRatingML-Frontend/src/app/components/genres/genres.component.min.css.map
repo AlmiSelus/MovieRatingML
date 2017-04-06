@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEA,aAAa,CACX,KAAK,CCEC,OAAM,CDDZ,mBAAO,CACL,KAAK,CCLF,IAAO",
+"sources": ["genres.component.sass","../../globals.sass"],
 "names": [],
 "file": "genres.component.min.css"
 }

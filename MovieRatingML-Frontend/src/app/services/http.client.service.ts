@@ -17,15 +17,16 @@ export class HttpClient {
     headers.append('Content-Type', 'text/plain');
   }
 
-  get(url) {
+  get(host: any, url: any) {
     let headers = new Headers();
+    this.urlPrefix = host || this.urlPrefix;
     this.createAuthorizationHeader(headers);
     return this.http.get(this.urlPrefix + url,{
       headers: headers
     });
   }
 
-  post(url, data) {
+  post(url: any, data: any) {
     let headers = new Headers();
     this.createAuthorizationHeader(headers);
     return this.http.post(this.urlPrefix + url, data, {

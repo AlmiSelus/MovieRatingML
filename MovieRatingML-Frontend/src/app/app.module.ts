@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent }  from './app.component';
 import { HeaderModule} from './modules/header/header.module';
 import { HomeModule} from './modules/home/home.module';
+import  { FooterComponent} from './components/footer/footer.component';
 
 import { HomeViewComponent } from './views/home/home.view.component';
 import { RankingsViewComponent } from './views/rankings/rankings.view.component';
@@ -21,7 +22,8 @@ import { RankingsViewComponent } from './views/rankings/rankings.view.component'
   declarations: [
     AppComponent,
     HomeViewComponent,
-    RankingsViewComponent
+    RankingsViewComponent,
+    FooterComponent
   ],
   bootstrap:    [ AppComponent ]
 })

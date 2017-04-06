@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Action",
+    "moviesCount": 1153
+  },
+  {
+    "name": "Adventure",
+    "moviesCount": 923
+  },
+  {
+    "name": "Animation",
+    "moviesCount": 242
+  },
+  {
+    "name": "Biography",
+    "moviesCount": 293
+  },
+  {
+    "name": "Comedy",
+    "moviesCount": 1872
+  },
+  {
+    "name": "Crime",
+    "moviesCount": 889
+  },
+  {
+    "name": "Documentary",
+    "moviesCount": 121
+  },
+  {
+    "name": "Drama",
+    "moviesCount": 2594
+  },
+  {
+    "name": "Family",
+    "moviesCount": 546
+  },
+  {
+    "name": "Fantasy",
+    "moviesCount": 610
+  },
+  {
+    "name": "Film-Noir",
+    "moviesCount": 6
+  },
+  {
+    "name": "Game-Show",
+    "moviesCount": 1
+  },
+  {
+    "name": "History",
+    "moviesCount": 207
+  },
+  {
+    "name": "Horror",
+    "moviesCount": 565
+  },
+  {
+    "name": "Music",
+    "moviesCount": 214
+  },
+  {
+    "name": "Musical",
+    "moviesCount": 132
+  },
+  {
+    "name": "Mystery",
+    "moviesCount": 500
+  },
+  {
+    "name": "News",
+    "moviesCount": 3
+  },
+  {
+    "name": "Reality-TV",
+    "moviesCount": 2
+  },
+  {
+    "name": "Romance",
+    "moviesCount": 1107
+  },
+  {
+    "name": "Sci-Fi",
+    "moviesCount": 616
+  },
+  {
+    "name": "Short",
+    "moviesCount": 5
+  },
+  {
+    "name": "Sport",
+    "moviesCount": 182
+  },
+  {
+    "name": "Thriller",
+    "moviesCount": 1411
+  },
+  {
+    "name": "War",
+    "moviesCount": 213
+  },
+  {
+    "name": "Western",
+    "moviesCount": 97
+  }
+]
