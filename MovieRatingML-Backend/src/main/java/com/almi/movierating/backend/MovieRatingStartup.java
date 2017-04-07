@@ -7,6 +7,11 @@ import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition;
 
 import javax.sql.DataSource;
 
@@ -38,6 +43,19 @@ public class MovieRatingStartup {
         HibernateJpaSessionFactoryBean factoryBean = new HibernateJpaSessionFactoryBean();
         factoryBean.getJpaPropertyMap().put("show_sql", "true");
         return factoryBean;
+    }
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/api/**").allowedOrigins("http://localhost:3000")
+                .allowedHeaders("x-requested-with", "accept", "authorization", "content-type")
+                .exposedHeaders("access-control-allow-headers", "access-control-allow-methods", "access-control-allow-origin", "access-control-max-age", "X-Frame-Options")
+                .allowedMethods(RequestMethod.OPTIONS.name(), RequestMethod.GET.name(), RequestMethod.POST.name());
+            }
+        };
     }
 
 }

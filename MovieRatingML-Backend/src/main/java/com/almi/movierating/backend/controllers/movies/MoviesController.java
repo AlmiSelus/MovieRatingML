@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.*;
  *
  * Main movies controller
  */
-@CrossOrigin(origins = "http://localhost:3000",
-  methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.OPTIONS},
-  allowedHeaders = {"x-requested-with", "accept", "authorization", "content-type"},
-  exposedHeaders = {"access-control-allow-headers", "access-control-allow-methods", "access-control-allow-origin", "access-control-max-age", "X-Frame-Options"})
 @RestController("/api/movies")
 public class MoviesController {
 
