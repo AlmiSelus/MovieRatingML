@@ -1,0 +1,532 @@
+[
+  {
+    "name": "Avatar ",
+    "duration": 178,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 7.9
+  },
+  {
+    "name": "Pirates of the Caribbean: At World's End ",
+    "duration": 169,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 7.1
+  },
+  {
+    "name": "Spectre ",
+    "duration": 148,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Thriller"
+      }
+    ],
+    "imdbScore": 6.8
+  },
+  {
+    "name": "The Dark Knight Rises ",
+    "duration": 164,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Thriller"
+      }
+    ],
+    "imdbScore": 8.5
+  },
+  {
+    "name": "Star Wars: Episode VII - The Force Awakens ",
+    "duration": -1,
+    "genres": [
+      {
+        "name": "Documentary"
+      }
+    ],
+    "imdbScore": 7.1
+  },
+  {
+    "name": "John Carter ",
+    "duration": 132,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 6.6
+  },
+  {
+    "name": "Spider-Man 3 ",
+    "duration": 156,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Romance"
+      }
+    ],
+    "imdbScore": 6.2
+  },
+  {
+    "name": "Tangled ",
+    "duration": 100,
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Animation"
+      },
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Musical"
+      },
+      {
+        "name": "Romance"
+      }
+    ],
+    "imdbScore": 7.8
+  },
+  {
+    "name": "Avengers: Age of Ultron ",
+    "duration": 141,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 7.5
+  },
+  {
+    "name": "Harry Potter and the Half-Blood Prince ",
+    "duration": 153,
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Mystery"
+      }
+    ],
+    "imdbScore": 7.5
+  },
+  {
+    "name": "Batman v Superman: Dawn of Justice ",
+    "duration": 183,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 6.9
+  },
+  {
+    "name": "Superman Returns ",
+    "duration": 169,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 6.1
+  },
+  {
+    "name": "Quantum of Solace ",
+    "duration": 106,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      }
+    ],
+    "imdbScore": 6.7
+  },
+  {
+    "name": "Pirates of the Caribbean: Dead Man's Chest ",
+    "duration": 151,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 7.3
+  },
+  {
+    "name": "The Lone Ranger ",
+    "duration": 150,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Western"
+      }
+    ],
+    "imdbScore": 6.5
+  },
+  {
+    "name": "Man of Steel ",
+    "duration": 143,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 7.2
+  },
+  {
+    "name": "The Chronicles of Narnia: Prince Caspian ",
+    "duration": 150,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 6.6
+  },
+  {
+    "name": "The Avengers ",
+    "duration": 173,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 8.1
+  },
+  {
+    "name": "Pirates of the Caribbean: On Stranger Tides ",
+    "duration": 136,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 6.7
+  },
+  {
+    "name": "Men in Black 3 ",
+    "duration": 106,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Comedy"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 6.8
+  },
+  {
+    "name": "The Hobbit: The Battle of the Five Armies ",
+    "duration": 164,
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 7.5
+  },
+  {
+    "name": "The Amazing Spider-Man ",
+    "duration": 153,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 7
+  },
+  {
+    "name": "Robin Hood ",
+    "duration": 156,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Drama"
+      },
+      {
+        "name": "History"
+      }
+    ],
+    "imdbScore": 6.7
+  },
+  {
+    "name": "The Hobbit: The Desolation of Smaug ",
+    "duration": 186,
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 7.9
+  },
+  {
+    "name": "The Golden Compass ",
+    "duration": 113,
+    "genres": [
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Family"
+      },
+      {
+        "name": "Fantasy"
+      }
+    ],
+    "imdbScore": 6.1
+  },
+  {
+    "name": "King Kong ",
+    "duration": 201,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Drama"
+      },
+      {
+        "name": "Romance"
+      }
+    ],
+    "imdbScore": 7.2
+  },
+  {
+    "name": "Titanic ",
+    "duration": 194,
+    "genres": [
+      {
+        "name": "Drama"
+      },
+      {
+        "name": "Romance"
+      }
+    ],
+    "imdbScore": 7.7
+  },
+  {
+    "name": "Captain America: Civil War ",
+    "duration": 147,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 8.2
+  },
+  {
+    "name": "Battleship ",
+    "duration": 131,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      },
+      {
+        "name": "Thriller"
+      }
+    ],
+    "imdbScore": 5.9
+  },
+  {
+    "name": "Jurassic World ",
+    "duration": 124,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      },
+      {
+        "name": "Thriller"
+      }
+    ],
+    "imdbScore": 7
+  },
+  {
+    "name": "The Campaign ",
+    "duration": 85,
+    "genres": [
+      {
+        "name": "Comedy"
+      }
+    ],
+    "imdbScore": 6.2
+  },
+  {
+    "name": "The Fifth Element ",
+    "duration": 126,
+    "genres": [
+      {
+        "name": "Action"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Sci-Fi"
+      }
+    ],
+    "imdbScore": 7.7
+  }
+]

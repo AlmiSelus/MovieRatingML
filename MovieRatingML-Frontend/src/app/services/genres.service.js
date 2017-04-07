@@ -18,12 +18,27 @@ var GenresService = (function () {
     function GenresService(_http) {
         this._http = _http;
         this._genresUrl = '/api/genres';
+        this._genresUrlMock = '/resources/genres.json';
     }
     GenresService.prototype.getProducts = function () {
-        return this._http.get(this._genresUrl)
+        return this._http.get(null, this._genresUrl)
             .map(function (res) { return res.json(); })
-            .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
             .catch(this.handleError);
+    };
+    GenresService.prototype.getProductsTMP = function () {
+        return this._http.get('http://localhost:3000', this._genresUrlMock)
+            .map(function (res) {
+            var genres = res.json();
+            genres.map(function (genre) { return genre.imageSource = '../../resources/img/genres/' + genre.name.toLowerCase() + '.png'; });
+            return genres;
+        })
+            .catch(this.handleError);
+        // this.genres.map((genre:IGenre) => genre.imageSource = '../../resources/img/genres/' + genre.name.toLowerCase() + '.png');
+        // console.log(this.genres);
+        // return this.genres;
+    };
+    GenresService.prototype.getImagePath = function (imageName) {
+        return '../../resources.img/genres/' + imageName.toLowerCase() + '.png';
     };
     GenresService.prototype.handleError = function (error) {
         console.error(error);

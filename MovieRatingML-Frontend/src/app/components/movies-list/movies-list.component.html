@@ -1,0 +1,12 @@
+<div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <div class="tile is-child is-3 box" *ngFor="let movie of movies">
+      <figure class="image">
+        <img src="http://bulma.io/images/placeholders/256x256.png">
+      </figure>
+      <h4 class="title is-4">{{movie.name}}</h4>
+      {{genresToString(movie.genres)}}
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+    </div>
+  </div>
+</div>

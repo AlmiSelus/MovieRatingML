@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,aAAa,CACX,gBAAgB,CAAE,WAAW,CAC7B,sBAAQ,CACN,KAAK,CCAD,OAAM,CDCV,6BAAM,CACJ,KAAK,CCFH,OAAM",
+"sources": ["footer.component.sass","../../globals.sass"],
+"names": [],
+"file": "footer.component.min.css"
+}

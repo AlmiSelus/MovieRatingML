@@ -12,7 +12,10 @@ var core_1 = require('@angular/core');
 var shared_module_1 = require('../shared/shared.module');
 var http_client_service_1 = require('../../services/http.client.service');
 var genres_service_1 = require('../../services/genres.service');
+var movies_service_1 = require('../../services/movies.service');
 var genres_component_1 = require('../../components/genres/genres.component');
+var genre_filter_pipe_1 = require('../../filters/genre.filter.pipe');
+var movies_list_component_1 = require('../../components/movies-list/movies-list.component');
 var HomeModule = (function () {
     function HomeModule() {
     }
@@ -22,14 +25,18 @@ var HomeModule = (function () {
                 shared_module_1.SharedModule
             ],
             declarations: [
-                genres_component_1.GenresComponent
+                genres_component_1.GenresComponent,
+                genre_filter_pipe_1.GenreFilterPipe,
+                movies_list_component_1.MoviesListComponent
             ],
             exports: [
-                genres_component_1.GenresComponent
+                genres_component_1.GenresComponent,
+                movies_list_component_1.MoviesListComponent
             ],
             providers: [
                 http_client_service_1.HttpClient,
-                genres_service_1.GenresService
+                genres_service_1.GenresService,
+                movies_service_1.MoviesService
             ]
         }), 
         __metadata('design:paramtypes', [])
